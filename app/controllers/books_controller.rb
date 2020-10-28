@@ -38,6 +38,10 @@ class BooksController < ApplicationController
     end 
 
     def destroy 
+        @book.destroy
+        respond_to do |f|
+            f.html {redirect_to root_path, notice: 'F for the book'}
+        end
     end
 
     private 
