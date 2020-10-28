@@ -14,7 +14,7 @@ class BooksController < ApplicationController
     end 
 
     def create
-        @book = Book.new(books_params)
+        @book = Book.new(book_params)
         respond_to do |f|
             if @book.save
                 f.html {redirect_to root_path, notice: 'Fue creado con éxito'}
@@ -23,6 +23,7 @@ class BooksController < ApplicationController
     end 
 
     def edit 
+        @statuses = Book.statuses.keys.to_a 
     end 
 
     def update
@@ -39,7 +40,7 @@ class BooksController < ApplicationController
     end
 
     private 
-    def books_params 
+    def book_params 
         params.require(:book).permit(:title, :author, :status, :borrowed_at, :returned_at)
     end 
 
