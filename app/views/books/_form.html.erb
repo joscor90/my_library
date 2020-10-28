@@ -9,10 +9,10 @@
     <%= f.select :status, @statuses %>
 
     <%= f.label :borrowed_at, 'Borrowed at' %>
-    <%= f.select_datetime :borrowed_at %>
+    <%= f.datetime_select :borrowed_at %>
 
     <%= f.label :returned_at, 'Returned at' %>
-    <%= f.select_datetime :returned_at %>
+    <%= f.datetime_select :returned_at %>
 
     <%= f.submit %>
 <% end %>
