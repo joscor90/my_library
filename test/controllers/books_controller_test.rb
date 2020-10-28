@@ -5,5 +5,6 @@ class BooksControllerTest < ActionController::TestCase
         get :index
         assert_response :success
         assert_template :index
+        assert_not_nil assigns(:books)
     end
 end
