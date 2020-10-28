@@ -1,6 +1,6 @@
 class BooksController < ApplicationController
     before_action :set_post, only: [:show, :edit, :update, :destroy]
     
-    def index 
+    def index
     end
 end
