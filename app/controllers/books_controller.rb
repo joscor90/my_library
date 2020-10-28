@@ -25,7 +25,14 @@ class BooksController < ApplicationController
     def edit 
     end 
 
-    def update 
+    def update
+        respond_to do |f|
+            if @book.update(book_params)
+                f.html {redirect_to root_path, notice: 'lo cambiaste exitosamente'}
+            else 
+                f.html {redirect_to edit_book_path}  #la diferencia con render es que este llama a una version más liviana de la vista, pero no redirige.
+            end
+        end 
     end 
 
     def destroy 
