@@ -4,7 +4,9 @@ class BooksController < ApplicationController
     def index
     end
 
-    def new 
+    def new
+        @book = Book.new 
+        @states = Book.states.keys.to_a 
     end 
 
     def create 
