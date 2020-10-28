@@ -24,6 +24,7 @@ class BooksController < ApplicationController
 
     private 
     def books_params 
+        params.require(:book).permit(:title, :author, :status, :borrowed_at, :returned_at)
     end 
 
      def set_book 
