@@ -19,6 +19,8 @@ class BooksController < ApplicationController
         respond_to do |f|
             if @book.save
                 f.html {redirect_to root_path, notice: 'Fue creado con éxito'}
+            else
+                f.html {render root_path, notice: 'No se pudo crear el libro'}
             end
         end
     end 
