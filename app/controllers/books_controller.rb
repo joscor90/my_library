@@ -1,4 +1,5 @@
 class BooksController < ApplicationController
+    validates :title, :author, :status, :borrowed_at, :returned_at, presence: true
     before_action :set_book, only: [:show, :edit, :update, :destroy]
     
     def index
