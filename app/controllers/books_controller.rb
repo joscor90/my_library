@@ -10,7 +10,12 @@ class BooksController < ApplicationController
     end 
 
     def create
-
+        @book = Book.new(books_params)
+        respond_to do |f|
+            if @book.save
+                f.html {redirect_to root_path, notice: 'Fue creado con éxito'}
+            end
+        end
     end 
 
     def edit 
