@@ -6,7 +6,7 @@ class BooksController < ApplicationController
 
     def new
         @book = Book.new 
-        @states = Book.states.keys.to_a 
+        @statuses = Book.statuses.keys.to_a 
     end 
 
     def create 
