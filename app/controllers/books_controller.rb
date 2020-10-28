@@ -9,7 +9,8 @@ class BooksController < ApplicationController
         @statuses = Book.statuses.keys.to_a 
     end 
 
-    def create 
+    def create
+
     end 
 
     def edit 
@@ -25,7 +26,8 @@ class BooksController < ApplicationController
     def books_params 
     end 
 
-    def set_book
+     def set_book 
+        @book = Book.find(params[:id])
     end
 
 end
