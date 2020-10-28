@@ -1,0 +1,30 @@
+<p>
+    <strong>Title</strong>
+    <%= @book.title %>
+</p>
+<p>
+    <strong>Author</strong>
+    <%= @book.author %>
+</p>
+<p>
+    <strong>
+        Status
+    </strong>
+    <%= @book.status %>
+</p>
+<p>
+    <strong>
+        Borrowed at
+    </strong>
+    <%= @book.borrowed_at %>
+</p>
+<p>
+    <strong>
+        Returned at
+    </strong>
+    <%= @book.returned_at %>
+</p>
+
+<%= link_to 'Back to the Index', root_path %>
+
+<%= link_to 'Edit this Book', edit_book_path(@book) %>
